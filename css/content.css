@@ -1,0 +1,57 @@
+.main .mod_data {
+  position: relative;
+  height: 250px;
+  padding-left: 305px;
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+.main .mod_data .data__cover {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main .mod_data .data__cover img {
+  width: 100%;
+  height: 100%;
+}
+.main .mod_data .data__cont {
+  padding-top: 13px;
+}
+.main .mod_data .data__cont .data__tit {
+  font-size: 31px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+  margin-right: 10px;
+}
+.main .mod_data .data__cont .data_autor span {
+  display: inline-table;
+  width: 16px;
+  height: 16px;
+  background: url(../img/icon_sprite@2x.png) -20px -240px;
+  background-size: 200px 340px;
+  margin: 5px 7px 0 0;
+}
+.main .mod_data .data__cont .data__info {
+  padding-top: 8px;
+}
+.main .mod_data .data__cont .data__info li {
+  height: 27px;
+  line-height: 27px;
+  font-weight: 400;
+}
+.main .mod_data .data__cont .data__actions {
+  position: absolute;
+  bottom: 23px;
+}
+.main .mod_data .data__cont .data__actions a {
+  min-width: 122px;
+  text-align: center;
+  padding: 0 18px;
+}
