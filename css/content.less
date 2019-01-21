@@ -25,7 +25,7 @@
         line-height: 50px;
         font-weight: 400;
         white-space: nowrap;
-        overflow: hidden;   
+        overflow: hidden;
         text-overflow: ellipsis;
         max-width: 70%;
         margin-right: 10px;
@@ -51,10 +51,161 @@
       .data__actions {
         position: absolute;
         bottom: 23px;
-        a {
+        .mod_btn {
           min-width: 122px;
           text-align: center;
           padding: 0 18px;
+          border: 1px solid #c9c9c9;
+          color: #000;
+          border-radius: 2px;
+          font-size: 14px;
+          margin-right: 6px;
+          padding: 0 23px;
+          height: 38px;
+          line-height: 38px;
+          display: inline-block;
+          white-space: nowrap;
+          box-sizing: border-box;
+          overflow: hidden;
+          &:hover {
+            background-color: rgb(241, 240, 240);
+          }
+          i {
+            display: inline-table;
+            width: 20px;
+            height: 16px;
+            background: url(../img/icon_sprite@2x.png) -80px -220px;
+            background-size: 200px 340px;
+            margin-right: 6px;
+            vertical-align: -3px;
+          }
+          .sou {
+            background-position: -60px 0;
+          }
+          .ping {
+            background-position: -140px -120px;
+          }
+          .duo {
+            width: 16px;
+            height: 16px;
+            background-position: -20px -80px;
+          }
+        }
+        .green {
+          border: 1px solid #31c27c;
+          background-color: #31c27c;
+          color: #fff;
+          &:hover {
+            background-color: #29a86b;
+          }
+        }
+      }
+    }
+  }
+  .detail_layout {
+    .detail_layout__main {
+      // padding-bottom: 20px;
+      .mod_songlist {
+        height: 1510px;
+        font-size: 14px;
+        width: 857px;
+        a {
+          font-family: 'Malgun Gothic';
+        }
+        // padding-bottom: 60px;
+        .songlist__header {
+          height: 50px;
+          line-height: 50px;
+          color: #999;
+          background-color: #fbfbfd;
+          position: relative;
+          padding-left: 46px;
+          padding-right: 100px;
+          li {
+            float: left;
+          }
+          .songlist__header_name {
+            width: 54%;
+          }
+
+          .songlist__header_autor {
+            width: 20%;
+          }
+          .songlist__header_zhuanji {
+            width: 20%;
+          }
+          .songlist__header_time {
+            position: absolute;
+            top: 0;
+            right: 38px;
+            width: 50px;
+          }
+        }
+        .songlist__list {
+          height: 50px;
+          line-height: 50px;
+          color: #999;
+          background-color: #fbfbfd;
+          position: relative;
+          padding-left: 46px;
+          padding-right: 100px;
+          li {
+            float: left;
+          }
+          .songlist__list_num {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            widows: 36px;
+          }
+          .songlist__list_name {
+            width: 54%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            .songlist__list {
+              display: inline-block;
+              width: 34px;
+              height: 16px;
+              background: url(../img/icon_sprite@2x.png) -80px -280px;
+              background-size: 200px 340px;
+              vertical-align: middle;
+              padding: 0;
+              margin-left: 10px;
+            }
+            .songlist__list_mv {
+              background-position: -40px -280px;
+              margin-left: 0;
+            }
+          }
+
+          .songlist__list_autor {
+            width: 20%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+          }
+          .songlist__list_zhuanji {
+            width: 20%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+          }
+          .songlist__list_time {
+            position: absolute;
+            top: 0;
+            right: 38px;
+            width: 50px;
+          }
         }
       }
     }
