@@ -103,14 +103,19 @@
     }
   }
   .detail_layout {
+    padding-right: 343px;
     .detail_layout__main {
       // padding-bottom: 20px;
+      float: left;
       .mod_songlist {
         height: 1510px;
         font-size: 14px;
         width: 857px;
+        .mod_songlist ul:nth-child(2n-1) {
+          background-color: red;
+        }
         a {
-          font-family: 'Malgun Gothic';
+          font-family: "Malgun Gothic";
         }
         // padding-bottom: 60px;
         .songlist__header {
@@ -160,12 +165,27 @@
           }
           .songlist__list_name {
             width: 54%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            word-break: break-all;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            display: -webkit-box;
+            position: relative;
+            .songlist__songname_txt {
+              max-width:25%;
+              box-sizing: border-box;
+              float: left;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              word-break: break-all;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              display: -webkit-box;
+              margin-right: 8px;
+              a {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-all;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+              }
+            }
             .songlist__list {
               display: inline-block;
               width: 34px;
@@ -179,6 +199,44 @@
             .songlist__list_mv {
               background-position: -40px -280px;
               margin-left: 0;
+            }
+            .mod_list_menu {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              overflow: hidden;
+              a {
+                display: inline-block;
+                margin-right: 5px;
+                vertical-align: top;
+                .mod_list_menus {
+                  display: block;
+                  width: 36px;
+                  height: 36px;
+                  background: url(../img/icon_list_menu.png) 0 0;
+                  &:hover {
+                    background-position: -40px 0;
+                  }
+                }
+                .add {
+                  background-position: 0 -80px;
+                  &:hover {
+                    background-position: -40px -80px;
+                  }
+                }
+                .down {
+                  background-position: 0 -120px;
+                  &:hover {
+                    background-position: -40px -120px;
+                  }
+                }
+                .fenx {
+                  background-position: 0 -40px;
+                  &:hover {
+                    background-position: -40px -40px;
+                  }
+                }
+              }
             }
           }
 
@@ -207,6 +265,69 @@
             width: 50px;
           }
         }
+      }
+    }
+    .detail_layout__other {
+      float: right;
+      position: relative;
+      width: 290px;
+      margin-right: -343px;
+      padding-bottom: 20px;
+      .mod_about {
+        line-height: 22px;
+        margin-bottom: 25px;
+        margin-top: -8px;
+        .mod_tit {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 46px;
+        }
+        .mod_cont {
+          max-height: 88px;
+          overflow: hidden;
+        }
+        .about__more {
+          margin-right: 10px;
+        }
+      }
+    }
+    .popup_data_detail {
+      display: none;
+      position: absolute;
+      top: 560px;
+      right: 460px;
+      width: 580px;
+      background: #fff;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+      border-radius: 4px;
+      z-index: 100;
+      .popup_data_detail__cont {
+        max-height: 400px;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 30px 15px;
+        overflow-y: auto;
+        h3 {
+          line-height: 22px;
+          font-size: 20px;
+          font-weight: 400;
+          padding: 0 0 20px;
+          margin: 0 24px 0 19px;
+        }
+        p {
+          min-height: 22px;
+          text-align: justify;
+          word-break: break-all;
+          margin: 0 24px 0 19px;
+        }
+      }
+      span {
+        position: absolute;
+        top: 36px;
+        right: -16px;
+        color: #fff;
+        font-size: 24px;
+        text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.35);
       }
     }
   }

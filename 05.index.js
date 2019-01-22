@@ -14,7 +14,7 @@ $('.input_serach input[type = text]').blur(function () {
 
 $('.playlist_tag__item').click(function () {
     $('.playlist_tag__item')
-    .removeClass('active')
+        .removeClass('active')
     var text = $(this).text()
     console.log(text)
     $(this)
@@ -30,7 +30,7 @@ $('.playlist_tag__item').click(function () {
         .css('display', 'block')
         .find('span')
         .text(text)
-        $('<a href="javascript:;" class="dianji"></a>').appendTo('.part_tags')
+    $('<a href="javascript:;" class="dianji"></a>').appendTo('.part_tags')
 
     // console.log('hhhhhh')
 })
@@ -40,23 +40,23 @@ $('.popup_tag.playlist_tag__item').click(function () {
         .parent()
         .parent()
         .css('display', 'none')
-        console.log('zzz')
-    
-  })
+    console.log('zzz')
+
+})
 
 //点击隐藏
 $('.part_tags').click(function () {
     $(this)
-    .css('display', 'none')
-    .prev()
-    .css('display', 'block')
-    .parent()
-    .parent()
-    .prev()
-    .find('.playlist_tag__item')
-    .removeClass('active')
+        .css('display', 'none')
+        .prev()
+        .css('display', 'block')
+        .parent()
+        .parent()
+        .prev()
+        .find('.playlist_tag__item')
+        .removeClass('active')
     console.log('www')
-  })
+})
 
 
 
@@ -93,7 +93,7 @@ $('.main_playlist_list .much').mouseenter(function () {
         .css('background-position', '-140px -260px')
 })
 $('.main_playlist_list .much').mouseleave(function () {
-    
+
     $(this)
         .find('i')
         .css('background-position', '-120px -260px')
@@ -109,7 +109,7 @@ $('.meau_cover_img').mouseleave(function () {
 
 
 
-
+//返回顶部
 $(window).scroll(function () {
     var v = $(window).scrollTop()
     if (v >= 300) {
@@ -120,4 +120,21 @@ $(window).scroll(function () {
 })
 $('.totop').click(function () {
     $(window).scrollTop(0)
+})
+
+//歌曲 播放添加下载一组按钮显示隐藏
+$('.songlist__list').mouseenter(function () {
+    $(this).find('.mod_list_menu').css('display', 'block')
+})
+
+$('.songlist__list').mouseleave(function () {
+    $(this).find('.mod_list_menu').css('display', 'none')
+})
+
+//简介
+$('.about__more').click(function () {
+    $(this).parent().parent().next().show()
+})
+$('.about__more').blur(function () {
+    $(this).parent().parent().next().hide()
 })
