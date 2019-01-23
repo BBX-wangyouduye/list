@@ -99,13 +99,15 @@
   background-color: #29a86b;
 }
 .main .detail_layout {
+  position: relative;
   padding-right: 343px;
 }
 .main .detail_layout .detail_layout__main {
   float: left;
+  height: 1110px;
 }
 .main .detail_layout .detail_layout__main .mod_songlist {
-  height: 1510px;
+  padding-bottom: 60px;
   font-size: 14px;
   width: 857px;
 }
@@ -260,11 +262,131 @@
   right: 38px;
   width: 50px;
 }
-.main .detail_layout .detail_layout__other {
-  float: right;
+.main .detail_layout .mod_comment {
+  float: left;
+  margin-top: 30px;
+}
+.main .detail_layout .mod_comment .commentbox {
+  width: 850px;
+  margin: 20px auto;
+}
+.main .detail_layout .mod_comment .commentbox h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 58px;
+}
+.main .detail_layout .mod_comment #comment {
+  background-color: #31c27c;
+  border-color: #31c27c;
+}
+.main .detail_layout .mod_comment .mytextarea {
+  width: 100%;
+  padding: 10px 10px;
+  overflow: auto;
+  word-break: break-all;
+  height: 100px;
+  background-color: #f5f5f5;
+  color: #000;
+  font-size: 1em;
+  resize: none;
+  border: none;
+  outline-style: none;
+  border: solid 1px #ececec;
+}
+.main .detail_layout .mod_comment .comment-list {
+  width: 850px;
+  margin: 20px auto;
+  clear: both;
+  padding-top: 20px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info {
   position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info header {
+  width: 7%;
+  position: absolute;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info header img {
+  width: 100%;
+  border-radius: 50%;
+  padding: 5px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right {
+  padding: 5px 0px 5px 8%;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right h3 {
+  margin: 5px 0px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-header {
+  height: 25px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-header span,
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-footer span {
+  padding-right: 2em;
+  color: #aaa;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-header span,
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-footer span.reply-btn,
+.main .detail_layout .mod_comment .send,
+.main .detail_layout .mod_comment .reply-list-btn {
+  cursor: pointer;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .reply-list {
+  border-left: 3px solid #ccc;
+  padding-left: 7px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .reply-list .reply {
+  border-bottom: 1px dashed #ccc;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .reply-list .reply div span {
+  padding-left: 10px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .reply-list .reply p span {
+  padding-right: 2em;
+  color: #aaa;
+}
+.main .detail_layout .mod_comment .mod_page {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.main .detail_layout .mod_comment .mod_page .mod_page_index {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+  padding: 0 21px;
+  box-sizing: border-box;
+  min-width: 24px;
+  color: #a2a2a2;
+  text-decoration: none;
+}
+.main .detail_layout .mod_comment .mod_page .mod_page_index:hover {
+  background-color: #31c27c;
+  color: #fff;
+}
+.main .detail_layout .mod_comment .mod_page .current {
+  background-color: #31c27c;
+  color: #fff;
+}
+.main .detail_layout .mod_comment .mod_page .more {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+  padding: 0 21px;
+  box-sizing: border-box;
+  min-width: 24px;
+  color: #a2a2a2;
+}
+.main .detail_layout .detail_layout__other {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 290px;
-  margin-right: -343px;
   padding-bottom: 20px;
 }
 .main .detail_layout .detail_layout__other .mod_about {

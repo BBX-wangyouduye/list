@@ -11,6 +11,7 @@
     <link rel="icon" href="img/favicon.ico"><!-- 设置标题 -->
     <title>舒缓R&B：一个人放松专用 - QQ音乐-千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！</title>
     <!-- 引入文件 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/content.css">
@@ -148,9 +149,10 @@
                             <li class="songlist__list_num">1</li>
                             <li class="songlist__list_name">
                                 <span class="songlist__songname_txt">
-                                    <a href="javascript:;" title="Don't Let Me Down">Don't Let Me Down</a>
+                                    <a href="javascript:;" title="There For You">There For You</a>
                                 </span>
                                 <i class="songlist__list songlist__list_du"></i>
+                                <i class="songlist__list songlist__list_mv"></i>
                                 <div class="mod_list_menu" style="display:none">
                                     <a href="javascript:;"><i class="mod_list_menus play"></i></a>
                                     <a href="javascript:;"><i class="mod_list_menus add"></i></a>
@@ -158,9 +160,9 @@
                                     <a href="javascript:;"><i class="mod_list_menus fenx"></i></a>
                                 </div>
                             </li>
-                            <li class="songlist__list_autor"><a href="javascript:;">Sabrina Claudio / Khalid</a></li>
-                            <li class="songlist__list_zhuanji"><a href="javascript:;">Don't Let Me Down / All To You</a></li>
-                            <li class="songlist__list_time">02:56</li>
+                            <li class="songlist__list_autor"><a href="javascript:;">Troye Sivan</a></li>
+                            <li class="songlist__list_zhuanji"><a href="javascript:;">There For You </a></li>
+                            <li class="songlist__list_time">03:41</li>
                         </ul>
                         <ul class="songlist__list">
                             <li class="songlist__list_num">2</li>
@@ -517,6 +519,21 @@
                     </div>
 
                 </div>
+                <div class="mod_comment">
+                    <div class="commentbox">
+                        <h2>评论</h2>
+                        <textarea cols="80" rows="50" placeholder="期待你的神评论......" class="mytextarea" id="content"></textarea>
+                        <div class="btn btn-info pull-right" id="comment">评论</div>
+                    </div>
+                    <div class="comment-list">
+                    </div>
+                    <!-- 页码 -->
+                    <div class="mod_page">
+                        <a href="javascript:;" class="mod_page_index current">1</a>
+                        <a href="javascript:;" class="mod_page_index">2</a>
+                        <a href="javascript:;" class="mod_page_index"><span>&gt;</span></a>
+                    </div>
+                </div>
                 <div class="detail_layout__other ">
                     <div class="mod_about ">
                         <div class="mod_tit">简介</div>
@@ -679,11 +696,82 @@
         </section>
     </section>
 
-
-
-
     <script src="lib/jquery-1.12.4.js"></script>
     <script src="05.index.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.comment.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+        //初始化数据
+        var arr = [{
+                id: 1,
+                img: "img/1.jpg",
+                replyName: "Robert丁",
+                beReplyName: "拾柒",
+                content: "很好。你用戳爺把我吸引進來了。",
+                time: "2018-01-17 11:42:53",
+                replyBody: []
+            }, {
+                id: 2,
+                img: "img/1.jpg",
+                replyName: "拾柒",
+                beReplyName: "拾柒",
+                content: "表白戳爷。",
+                time: "2018-01-17 11:42:53",
+                replyBody: []
+            },
+            {
+                id: 3,
+                img: "img/1.jpg",
+                replyName: "Gambler",
+                beReplyName: "Gambler",
+                content: "有品位听得我好舒服名",
+                time: "2019-01-03 11:42:53",
+                replyBody: [{
+                    id: 3,
+                    img: "",
+                    replyName: "Devil",
+                    beReplyName: "Devil",
+                    content: "ye",
+                    time: "2019-01-03 13:35:53"
+                }]
+            },
+            {
+                id: 4,
+                img: "img/1.jpg",
+                replyName: "自私人",
+                beReplyName: "自私人",
+                content: "这封面 有品位",
+                time: "2018-12-28 11:42:53",
+                replyBody: []
+            },{
+                id: 5,
+                img: "img/1.jpg",
+                replyName: "九头",
+                beReplyName: "九头",
+                content: "不错",
+                time: "2018-12-28 11:42:53",
+                replyBody: []
+            }
+        ];
+        $(function () {
+            $(".comment-list").addCommentList({
+                data: arr,
+                add: ""
+            });
+            $("#comment").click(function () {
+                var obj = new Object();
+                obj.img = "./img/1.jpg";
+                obj.replyName = "懒人";
+                obj.content = $("#content").val();
+                obj.replyBody = "";
+                $(".comment-list").addCommentList({
+                    data: [],
+                    add: obj
+                });
+            });
+        })
+    </script>
 </body>
 
 </html>
