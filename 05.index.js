@@ -133,8 +133,8 @@ $('.songlist__list').mouseleave(function () {
 
 //简介
 $('.about__more').click(function () {
-    $(this).parent().next().show()
+    $(this).parent().parent().next().show()
 })
 $('.about__more').blur(function () {
-    $(this).parent().next().hide()
+    $(this).parent().parent().next().hide()
 })

@@ -1,5 +1,11 @@
 // 主体部分
 .main {
+  a{
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
+  }
   .mod_data {
     position: relative;
     height: 250px;
@@ -299,6 +305,11 @@
         outline-style: none;
         border: solid 1px #ececec;
       }
+      .zi{
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+      }
       .comment-list {
         width: 850px;
         margin: 20px auto;
@@ -423,8 +434,8 @@
     .popup_data_detail {
       display: none;
       position: absolute;
-      top: 560px;
-      right: 460px;
+      top: 85px;
+      right: 305px;
       width: 580px;
       background: #fff;
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);

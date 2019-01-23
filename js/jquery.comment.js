@@ -90,7 +90,7 @@
 			if(content != ""){
 				var parentEl = $(this).parent().parent().parent().parent();
 				var obj = new Object();
-				obj.replyName="匿名";
+				obj.replyName="Crush";
 				if(el.parent().parent().hasClass("reply")){
 					console.log("1111");
 					obj.beReplyName = el.parent().parent().find("a:first").text();

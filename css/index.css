@@ -4,6 +4,9 @@
   min-width: 1200px;
   margin: 0 auto;
 }
+.main_body a {
+  text-decoration: none;
+}
 .main_body .header {
   background-color: #fff;
 }
